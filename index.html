@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio 3D AI</title>
+  <link rel="stylesheet" href="3D.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="menu-btn" id="openMenuBtn">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <h3>Options 3D</h3>
+      <button class="close-btn" id="closeMenuBtn">&times;</button>
+    </div>
+    <label class="menu-item">
+      📷 Importer une photo
+      <input type="file" id="fileInput" accept="image/*">
+    </label>
+    <a href="https://itslitho.com/" target="_blank" class="menu-item link-button">
+      🖼️ Générateur 3D (ItsLitho) ↗
+    </a>
+    <div class="menu-item" id="linkOption">🔗 Coller un lien</div>
+    <div class="menu-item" id="settingsOption">⚙️ Mode Rendu</div>
+  </div>
+
+  <div class="bottom-container">
+    <div class="emotes-wrapper">
+      <div class="emotes-list">
+        <button class="emote-btn" onclick="jouerEmote('rotation')">🔄 Rotation</button>
+        <button class="emote-btn" onclick="jouerEmote('saut')">🦘 Sauter</button>
+        <button class="emote-btn" onclick="jouerEmote('pulsation')">💓 Pulsation</button>
+        <button class="emote-btn" onclick="jouerEmote('reset')">🛑 Stopper</button>
+      </div>
+    </div>
+
+    <div class="search-box-bottom">
+      <input type="text" id="searchInput" placeholder="Posez une question ou demandez un modèle 3D...">
+      <button class="search-btn" id="searchSubmit">➔</button>
+    </div>
+  </div>
+
+  <div id="canvas-container"></div>
+
+  <script src="3D.js"></script>
+</body>
+</html>
